@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Platform Product Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <img src="../icons/icon48.png" alt="" class="logo" width="32" height="32" />
+        <div class="header-text">
+          <h1>Product Exporter</h1>
+          <p class="subtitle">Search results → CSV + main images (ZIP)</p>
+        </div>
+        <span id="platformBadge" class="badge" data-tone="muted" title="Detected platform">Detecting…</span>
+      </header>
+
+      <section class="page-info" aria-label="Current page">
+        <div class="info-row">
+          <span class="label">Page</span>
+          <span id="pageUrl" class="value url">—</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Products</span>
+          <span id="detectedCount" class="value">—</span>
+        </div>
+      </section>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <section id="controls" class="controls" hidden>
+        <label class="field">
+          <span>Show up to</span>
+          <select id="limitSelect" aria-label="Maximum number of products"></select>
+        </label>
+        <label class="checkbox" title="Sponsored listings are ads. They are hidden unless this is checked.">
+          <input type="checkbox" id="includeSponsored" />
+          <span>Include sponsored</span>
+        </label>
+        <div class="control-buttons">
+          <button id="rescanBtn" class="btn btn-ghost" type="button">Rescan</button>
+          <button
+            id="scrollBtn"
+            class="btn btn-ghost"
+            type="button"
+            title="Scrolls this page down a few screens so lazy-loaded products appear, then rescans. It does not open other pages."
+          >
+            Load more
+          </button>
+        </div>
+      </section>
+
+      <details id="skippedDetails" class="skipped" hidden>
+        <summary id="skippedSummary">Skipped</summary>
+        <ul id="skippedList"></ul>
+      </details>
+
+      <section id="previewSection" class="preview" hidden aria-label="Detected products">
+        <div class="preview-toolbar">
+          <label class="checkbox">
+            <input type="checkbox" id="selectAllBox" aria-label="Select or deselect all products" />
+            <span id="selectionCount">0 selected</span>
+          </label>
+          <div class="toolbar-buttons">
+            <button id="selectAllBtn" class="btn btn-link" type="button">Select all</button>
+            <button id="deselectAllBtn" class="btn btn-link" type="button">Deselect all</button>
+          </div>
+        </div>
+        <ul id="productList" class="product-list"></ul>
+      </section>
+
+      <section id="progressSection" class="progress" hidden aria-live="polite">
+        <div class="progress-header">
+          <span id="progressLabel">Exporting…</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="progressTrack">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div id="progressCounts" class="progress-counts"></div>
+        <div id="progressMessage" class="progress-message"></div>
+        <ul id="failureList" class="failure-list"></ul>
+        <button id="dismissBtn" class="btn btn-link" type="button" hidden>Dismiss</button>
+      </section>
+
+      <footer class="footer">
+        <button id="exportSelectedBtn" class="btn btn-primary" type="button" disabled>Export selected</button>
+        <button id="exportAllBtn" class="btn btn-secondary" type="button" disabled>Export all detected</button>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

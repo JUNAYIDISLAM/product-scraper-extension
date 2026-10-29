@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Multi-Platform Product Exporter",
+  "short_name": "Product Exporter",
+  "version": "1.0.0",
+  "description": "Export products from Walmart, Amazon.com, Target, Best Buy and eBay search results to a ZIP with a CSV file and main product images.",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Multi-Platform Product Exporter",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "offscreen",
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "https://i5.walmartimages.com/*",
+    "https://m.media-amazon.com/*",
+    "https://images-na.ssl-images-amazon.com/*",
+    "https://target.scene7.com/*",
+    "https://pisces.bbystatic.com/*",
+    "https://i.ebayimg.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

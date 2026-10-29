@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+  Hand-written fixture modelled on Target.com search result markup
+  (data-test="@web/site-top-of-funnel/ProductCardWrapper" cards).
+  It is NOT a captured live page.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lamp : Target</title>
+  </head>
+  <body>
+    <div data-test="product-grid">
+      <section>
+        <div class="styles_ndsRow">
+          <!-- 1. Regular card -->
+          <div data-test="@web/site-top-of-funnel/ProductCardWrapper" class="styles_ndsCol">
+            <div data-test="@web/site-top-of-funnel/ProductCard">
+              <div data-test="@web/ProductCard/ProductCardImage/primary">
+                <a href="/p/ceramic-table-lamp-threshold/-/A-80000001#lnk=sametab" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source srcset="https://target.scene7.com/is/image/Target/GUEST_lamp0001?wid=300&amp;hei=300&amp;qlt=80&amp;fmt=webp" type="image/webp" />
+                    <img alt="Ceramic Table Lamp - Threshold" src="https://target.scene7.com/is/image/Target/GUEST_lamp0001?wid=300&amp;hei=300&amp;qlt=80&amp;fmt=pjpeg" />
+                  </picture>
+                </a>
+              </div>
+              <div data-test="@web/ProductCard/body">
+                <div data-test="@web/ProductCard/title">
+                  <a data-test="product-title" href="/p/ceramic-table-lamp-threshold/-/A-80000001#lnk=sametab" aria-label="Ceramic Table Lamp - Threshold">Ceramic Table Lamp - Threshold</a>
+                </div>
+                <div data-test="@web/Price/PriceAndPromoMinimal"><span data-test="current-price"><span>$34.99</span></span></div>
+                <div data-test="ratings">4.6 out of 5 stars with 210 ratings</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Sponsored card with a price range -->
+          <div data-test="@web/site-top-of-funnel/ProductCardWrapper" class="styles_ndsCol">
+            <div data-test="@web/site-top-of-funnel/ProductCard">
+              <p data-test="sponsoredText">Sponsored</p>
+              <div data-test="@web/ProductCard/ProductCardImage/primary">
+                <a href="/p/led-desk-lamp/-/A-80000002?preselect=80000010#lnk=sametab"><picture><img alt="" src="https://target.scene7.com/is/image/Target/GUEST_lamp0002?wid=300&amp;hei=300&amp;qlt=80&amp;fmt=pjpeg" /></picture></a>
+              </div>
+              <div data-test="@web/ProductCard/title"><a data-test="product-title" href="/p/led-desk-lamp/-/A-80000002?preselect=80000010#lnk=sametab">LED Desk Lamp with USB Port</a></div>
+              <span data-test="current-price"><span>$19.99 - $29.99</span></span>
+            </div>
+          </div>
+
+          <!-- 3. "See price in cart" (no price shown) -->
+          <div data-test="@web/site-top-of-funnel/ProductCardWrapper" class="styles_ndsCol">
+            <div data-test="@web/site-top-of-funnel/ProductCard">
+              <div data-test="@web/ProductCard/ProductCardImage/primary">
+                <a href="/p/floor-lamp-brass/-/A-80000003"><picture><img alt="Floor Lamp Brass" src="https://target.scene7.com/is/image/Target/GUEST_lamp0003?wid=300&amp;hei=300&amp;qlt=80&amp;fmt=pjpeg" /></picture></a>
+              </div>
+              <div data-test="@web/ProductCard/title"><a data-test="product-title" href="/p/floor-lamp-brass/-/A-80000003">Arc Floor Lamp Brass - Project 62™</a></div>
+              <span data-test="current-price"><span>See price in cart</span></span>
+            </div>
+          </div>
+
+          <!-- 4-5. Not yet rendered (lazy) cards -->
+          <div data-test="@web/site-top-of-funnel/ProductCardWrapper" class="styles_ndsCol"><div class="skeleton-card"></div></div>
+          <div data-test="@web/site-top-of-funnel/ProductCardWrapper" class="styles_ndsCol"><div class="skeleton-card"></div></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

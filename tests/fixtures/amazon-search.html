@@ -1,0 +1,139 @@
+<!doctype html>
+<!--
+  Hand-written fixture modelled on Amazon.com search result markup
+  (div[data-component-type="s-search-result"] cards). It is NOT a captured
+  live page. Image file names encode the ASIN suffix (61img0001 -> B0TEST0001)
+  so tests can verify that each image stays with its own product.
+-->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amazon.com : wireless headphones</title>
+  </head>
+  <body>
+    <div id="search">
+      <div class="s-main-slot s-result-list s-search-results sg-row">
+        <!-- 1. Organic result with srcset and a struck-through "Typical" price -->
+        <div data-asin="B0TEST0001" data-index="2" data-component-type="s-search-result" class="sg-col-4-of-24 s-result-item s-asin">
+          <div class="sg-col-inner">
+            <div class="puis-card-container">
+              <div class="s-product-image-container">
+                <a class="a-link-normal s-no-outline" href="/Soundwave-Wireless-Headphones-Cancelling/dp/B0TEST0001/ref=sr_1_1?keywords=wireless+headphones&amp;qid=1&amp;sr=8-1">
+                  <img class="s-image"
+                       src="https://m.media-amazon.com/images/I/61img0001._AC_UY218_.jpg"
+                       srcset="https://m.media-amazon.com/images/I/61img0001._AC_UY218_.jpg 1x, https://m.media-amazon.com/images/I/61img0001._AC_UY327_QL65_.jpg 1.5x, https://m.media-amazon.com/images/I/61img0001._AC_UY436_QL65_.jpg 2x"
+                       alt="Soundwave Wireless Headphones" />
+                </a>
+              </div>
+              <div data-cy="title-recipe" class="a-section a-spacing-none">
+                <a class="a-link-normal s-line-clamp-2 s-link-style a-text-normal" href="/Soundwave-Wireless-Headphones-Cancelling/dp/B0TEST0001/ref=sr_1_1">
+                  <h2 aria-label="Soundwave Wireless Headphones, Active Noise Cancelling, 40H Playtime" class="a-size-base-plus a-spacing-none a-color-base a-text-normal"><span>Soundwave Wireless Headphones, Active Noise Cancelling, 40H Playtime</span></h2>
+                </a>
+              </div>
+              <div data-cy="reviews-block"><span class="a-icon-alt">4.5 out of 5 stars</span> <span class="a-size-base s-underline-text">12,345</span></div>
+              <div data-cy="price-recipe" class="a-section a-spacing-none a-spacing-top-small">
+                <div class="a-row a-size-base a-color-base">
+                  <a class="a-link-normal s-no-hover s-underline-text" href="/dp/B0TEST0001">
+                    <span class="a-price" data-a-size="xl" data-a-color="base"><span class="a-offscreen">$59.99</span><span aria-hidden="true"><span class="a-price-symbol">$</span><span class="a-price-whole">59<span class="a-price-decimal">.</span></span><span class="a-price-fraction">99</span></span></span>
+                    <div class="a-section aok-inline-block"><span class="a-size-base a-color-secondary">Typical: </span><span class="a-price a-text-price" data-a-size="b" data-a-strike="true"><span class="a-offscreen">$79.99</span><span aria-hidden="true">$79.99</span></span></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sponsored result -->
+        <div data-asin="B0TEST0002" data-index="3" data-component-type="s-search-result" class="sg-col-4-of-24 s-result-item s-asin AdHolder">
+          <div class="sg-col-inner">
+            <div class="puis-card-container">
+              <a class="a-link-normal s-no-outline" href="/sspa/click?ie=UTF8&amp;spc=MTo1&amp;url=%2FBassPro-Earbuds%2Fdp%2FB0TEST0002%2Fref%3Dsr_1_2_sspa">
+                <img class="s-image" src="https://m.media-amazon.com/images/I/61img0002._AC_UY218_.jpg" srcset="https://m.media-amazon.com/images/I/61img0002._AC_UY218_.jpg 1x, https://m.media-amazon.com/images/I/61img0002._AC_UY436_QL65_.jpg 2x" alt="" />
+              </a>
+              <div class="a-row a-spacing-micro"><span class="puis-label-popover puis-sponsored-label-text"><span class="puis-label-popover-default"><span class="a-color-secondary">Sponsored</span></span></span></div>
+              <div data-cy="title-recipe">
+                <a class="a-link-normal" href="/sspa/click?ie=UTF8&amp;url=%2FBassPro-Earbuds%2Fdp%2FB0TEST0002">
+                  <h2 aria-label="Sponsored Ad – BassPro Earbuds, Bluetooth 5.3" class="a-size-base-plus"><span>BassPro Earbuds, Bluetooth 5.3</span></h2>
+                </a>
+              </div>
+              <div data-cy="price-recipe"><span class="a-price"><span class="a-offscreen">$24.99</span><span aria-hidden="true">$24.99</span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Brand shown in a separate heading, price range, unit price -->
+        <div data-asin="B0TEST0003" data-index="4" data-component-type="s-search-result" class="sg-col-4-of-24 s-result-item s-asin">
+          <div class="sg-col-inner">
+            <div class="puis-card-container">
+              <a class="a-link-normal s-no-outline" href="/dp/B0TEST0003">
+                <img class="s-image" src="https://m.media-amazon.com/images/I/61img0003._AC_UL320_.jpg" srcset="https://m.media-amazon.com/images/I/61img0003._AC_UL320_.jpg 1x, https://m.media-amazon.com/images/I/61img0003._AC_UL640_QL65_.jpg 2x" alt="" />
+              </a>
+              <div data-cy="title-recipe">
+                <div class="a-row a-color-secondary"><h2 class="a-size-mini s-line-clamp-1"><span class="a-size-base-plus a-color-base">Acme Audio</span></h2></div>
+                <a class="a-link-normal" href="/Kids-Headphones/dp/B0TEST0003/ref=sr_1_3">
+                  <h2 aria-label="Kids Over-Ear Headphones, Volume Limited" class="a-size-base-plus"><span>Kids Over-Ear Headphones, Volume Limited</span></h2>
+                </a>
+              </div>
+              <div data-cy="price-recipe">
+                <div class="a-row"><span class="a-price" data-a-size="xl"><span class="a-offscreen">$15.99</span><span aria-hidden="true">$15.99</span></span> - <span class="a-price" data-a-size="xl"><span class="a-offscreen">$29.99</span><span aria-hidden="true">$29.99</span></span></div>
+                <span class="a-size-base a-color-secondary">(<span class="a-price a-text-price" data-a-size="b"><span class="a-offscreen">$1.00</span><span aria-hidden="true">$1.00</span></span>/Count)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. No featured offer: only a "More Buying Choices" price, which is not the main price -->
+        <div data-asin="B0TEST0004" data-index="5" data-component-type="s-search-result" class="sg-col-4-of-24 s-result-item s-asin">
+          <div class="sg-col-inner">
+            <div class="puis-card-container">
+              <a class="a-link-normal s-no-outline" href="/dp/B0TEST0004">
+                <img class="s-image" src="https://m.media-amazon.com/images/I/61img0004._AC_UY218_.jpg" alt="" />
+              </a>
+              <div data-cy="title-recipe"><a href="/dp/B0TEST0004"><h2><span>Team Sponsored Edition Gaming Headset</span></h2></a></div>
+              <div data-cy="price-recipe"><span class="a-color-base">No featured offers available</span></div>
+              <div data-cy="secondary-offer-recipe"><span class="a-color-base">$45.00</span> <span class="a-color-secondary">(3 used &amp; new offers)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Same ASIN repeated later on the page (deduplicated) -->
+        <div data-asin="B0TEST0001" data-index="9" data-component-type="s-search-result" class="sg-col-4-of-24 s-result-item s-asin">
+          <div class="sg-col-inner">
+            <a class="a-link-normal s-no-outline" href="/dp/B0TEST0001"><img class="s-image" src="https://m.media-amazon.com/images/I/61img0001._AC_UY218_.jpg" alt="" /></a>
+            <div data-cy="title-recipe"><a href="/dp/B0TEST0001"><h2><span>Soundwave Wireless Headphones, Active Noise Cancelling, 40H Playtime</span></h2></a></div>
+            <div data-cy="price-recipe"><span class="a-price"><span class="a-offscreen">$59.99</span></span></div>
+          </div>
+        </div>
+
+        <!-- 6. Result container without an ASIN (skipped) -->
+        <div data-asin="" data-index="10" data-component-type="s-search-result" class="s-result-item">
+          <div data-cy="title-recipe"><h2><span>Broken card</span></h2></div>
+        </div>
+
+        <!-- 7. Editorial widget: not a search result, must be ignored -->
+        <div data-asin="" data-index="11" data-component-type="s-impression-logger" class="s-result-item s-widget">
+          <span>Editorial recommendations</span>
+          <a href="/dp/B0TEST0099"><img src="https://m.media-amazon.com/images/I/61img0099._AC_UY218_.jpg" alt="" /></a>
+          <h2>Best headphones for travel</h2>
+        </div>
+
+        <!-- 8. Image without srcset or resize modifier -->
+        <div data-asin="B0TEST0005" data-index="12" data-component-type="s-search-result" class="s-result-item s-asin">
+          <div class="sg-col-inner">
+            <a class="a-link-normal s-no-outline" href="/dp/B0TEST0005"><img class="s-image" src="https://m.media-amazon.com/images/I/61img0005.png" alt="" /></a>
+            <div data-cy="title-recipe"><a href="/dp/B0TEST0005"><h2><span>Studio Monitor Headphones   with  Coiled   Cable</span></h2></a></div>
+            <div data-cy="price-recipe"><span class="a-price"><span class="a-offscreen">$1,299.00</span></span></div>
+          </div>
+        </div>
+
+        <!-- 9. Card without any image -->
+        <div data-asin="B0TEST0006" data-index="13" data-component-type="s-search-result" class="s-result-item s-asin">
+          <div class="sg-col-inner">
+            <div data-cy="title-recipe"><a href="/dp/B0TEST0006"><h2><span>Replacement Ear Pads (2 Pack)</span></h2></a></div>
+            <div data-cy="price-recipe"><span class="a-price"><span class="a-offscreen">$9.49</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

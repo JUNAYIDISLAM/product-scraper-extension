@@ -1,0 +1,30 @@
+{
+  "name": "multi-platform-product-exporter",
+  "version": "1.0.0",
+  "description": "Chrome extension (Manifest V3) that exports products from supported e-commerce search results pages into a ZIP with a CSV file and each product's main image.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test",
+    "test:e2e": "node tests/e2e/browser-smoke.mjs",
+    "check": "npm test && npm run build",
+    "package": "npm run build && node scripts/package.mjs",
+    "icons": "node scripts/generate-icons.mjs",
+    "sample": "node scripts/make-sample.mjs",
+    "try-adapter": "node scripts/try-adapter.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "^26.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+  Hand-written fixture modelled on BestBuy.com search markup. It contains both
+  the classic layout (li.sku-item) and a newer layout (li.product-list-item).
+  It is NOT a captured live page.
+-->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>laptop - Best Buy</title>
+  </head>
+  <body>
+    <ol class="sku-item-list" id="main-results">
+      <!-- 1. Classic layout with "Was" and "Save" amounts; name contains a double quote -->
+      <li class="sku-item" data-sku-id="6500001">
+        <div class="shop-sku-list-item">
+          <div class="list-item lv" data-sku-id="6500001">
+            <div class="image-column">
+              <a class="image-link" href="/site/hp-14-laptop-intel-celeron/6500001.p?skuId=6500001&amp;intl=nosplash">
+                <img class="product-image"
+                     src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6500/6500001_sd.jpg;maxHeight=200;maxWidth=300;format=webp"
+                     alt="HP - 14&quot; Laptop" />
+              </a>
+            </div>
+            <div class="information-column">
+              <h4 class="sku-title"><a href="/site/hp-14-laptop-intel-celeron/6500001.p?skuId=6500001">HP - 14" Laptop - Intel Celeron - 4GB Memory - 64GB eMMC - Snowflake White</a></h4>
+              <div class="sku-model"><span class="sku-value">14-dq0040nr</span></div>
+            </div>
+            <div class="price-column">
+              <div class="pricing-price">
+                <div class="priceView-hero-price priceView-customer-price"><span aria-hidden="true">$179.99</span><span class="sr-only">Your price for this item is $179.99</span></div>
+                <div class="pricing-price__savings">Save $50</div>
+                <div class="pricing-price__regular-price">Was $229.99</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 2. Classic layout, sold out: no price shown -->
+      <li class="sku-item" data-sku-id="6500002">
+        <div class="image-column"><a href="/site/lenovo-ideapad-slim-3/6500002.p?skuId=6500002"><img class="product-image" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6500/6500002_sd.jpg;maxHeight=200;maxWidth=300" alt="" /></a></div>
+        <h4 class="sku-title"><a href="/site/lenovo-ideapad-slim-3/6500002.p?skuId=6500002">Lenovo - IdeaPad Slim 3 15.6" Laptop</a></h4>
+        <button class="c-button c-button-disabled">Sold Out</button>
+      </li>
+
+      <!-- 3. Newer layout -->
+      <li class="product-list-item product-list-item-gridView">
+        <div class="sku-block" data-testid="product-card">
+          <a class="product-list-item-link" href="/product/apple-macbook-air-13-inch-m3/J3X2ABCDEF/sku/6500003">
+            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6500/6500003_sd.jpg;maxHeight=300;maxWidth=450" alt="Apple MacBook Air" />
+          </a>
+          <h2 class="product-title">Apple - MacBook Air 13-inch Laptop - M3 chip - 16GB Memory - 256GB SSD - Midnight</h2>
+          <div data-testid="customer-price"><span>$899.00</span></div>
+          <div class="regular-price">Was $1,099.00</div>
+        </div>
+      </li>
+    </ol>
+  </body>
+</html>

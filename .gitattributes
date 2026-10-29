@@ -1,0 +1,9 @@
+# Store and check out source files with LF line endings on every OS.
+* text=auto eol=lf
+
+# The sample CSV must keep its UTF-8 BOM and CRLF line endings exactly as exported.
+*.csv -text
+
+# Binary files
+*.png binary
+*.zip binary
